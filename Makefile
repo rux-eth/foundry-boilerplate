@@ -18,6 +18,7 @@ install :;
 	forge install dapphub/ds-test 
 	forge install OpenZeppelin/openzeppelin-contracts
 	forge install foundry-rs/forge-std
+	forge install safe-global/safe-contracts
 
 # Update Dependencies
 update:; forge update
