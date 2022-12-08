@@ -16,7 +16,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "make && forge build",
+    "build": "make",
     "build:optimized": "FOUNDRY_PROFILE=optimized forge build",
     "test": "forge test -vvv",
     "test:e2e": "forge test --match-contract E2E -vvv",
