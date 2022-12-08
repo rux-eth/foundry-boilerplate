@@ -17,7 +17,7 @@ remove :; rm -rf .gitmodules && rm -rf .git/modules/* && rm -rf lib && touch .gi
 install :; 
 	forge install dapphub/ds-test 
 	forge install OpenZeppelin/openzeppelin-contracts
-	foundry-rs/forge-std
+	forge install foundry-rs/forge-std
 
 # Update Dependencies
 update:; forge update
