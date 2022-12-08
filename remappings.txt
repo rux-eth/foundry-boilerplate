@@ -1,8 +1,8 @@
 @openzeppelin/=lib/openzeppelin-contracts/contracts
 @ds-test/=lib/ds-test/src
 @forge-std/=lib/forge-std/src
-@safe-contracts/=lib/safe-contracts/src
+@safe-contracts/=lib/safe-contracts/contracts
 
-contracts/=solidity/contracts
-interfaces/=solidity/interfaces
-test/=solidity/test
+contracts/=src/contracts
+interfaces/=src/interfaces
+test/=src/test

@@ -4,8 +4,8 @@ single_line_statement_blocks = 'single'
 
 [profile.default]
 solc = '0.8.14'
-src = 'solidity'
-test = 'solidity/test'
+src = 'src'
+test = 'src/test'
 out = 'out'
 libs = ['lib']
 fuzz_runs = 1000
@@ -20,8 +20,9 @@ fuzz_runs = 5000
 via_ir = true
 out = 'out-via-ir'
 fuzz_runs = 5000
-src = 'solidity/test'
+src = 'src/test'
 
 [rpc_endpoints]
+local = "http://127.0.0.1:8545"
 mainnet = "${MAINNET_RPC}"
-rinkeby = "${RINKEBY_RPC}"
+goerli = "${GOERLI_RPC}"

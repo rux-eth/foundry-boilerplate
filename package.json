@@ -28,8 +28,7 @@
     "deploy:mainnet": "bash -c 'source .env && forge script DeployMainnet --rpc-url $MAINNET_RPC --broadcast --private-key $MAINNET_DEPLOYER_PK --verify --etherscan-api-key $ETHERSCAN_API_KEY'",
     "lint:fix": "forge fmt",
     "postinstall": "forge install",
-    "lint:check": "forge fmt --check",
-    "prepare": "husky install"
+    "lint:check": "forge fmt --check"
   },
   "devDependencies": {
     "lint-staged": ">=10"
