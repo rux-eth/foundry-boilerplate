@@ -1,33 +1,16 @@
 {
-  "name": "solidity-foundry-boilerplate",
-  "version": "1.0.0",
-  "description": "Production ready Solidity boilerplate with Foundry",
-  "homepage": "https://github.com/defi-wonderland/solidity-foundry-boilerplate#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/defi-wonderland/solidity-foundry-boilerplate.git"
-  },
-  "author": "Wonderland",
-  "contributors": [
-    "0xGorilla (https://github.com/0xGorilla)",
-    "0xng (https://github.com/0xng)",
-    "gas1cent (https://github.com/gas1cent)"
-  ],
-  "license": "MIT",
-  "private": true,
+  "name": "foundry-boilerplate",
   "scripts": {
     "build": "make",
-    "build:optimized": "FOUNDRY_PROFILE=optimized forge build",
     "test": "forge test -vvv",
     "test:e2e": "forge test --match-contract E2E -vvv",
     "test:unit": "forge test --match-contract Unit -vvv",
     "test:unit:deep": "FOUNDRY_FUZZ_RUNS=5000 yarn test:unit",
-    "test:fork": "forge test --fork-url $FORK_URL -vvv",
     "coverage": "forge coverage --match-contract Unit",
-    "deploy:goerli": "bash -c 'source .env && forge script DeployGoerli --rpc-url $GOERLI_RPC --broadcast --private-key $RINKEBY_DEPLOYER_PK --verify --etherscan-api-key $ETHERSCAN_API_KEY'",
-    "deploy:mainnet": "bash -c 'source .env && forge script DeployMainnet --rpc-url $MAINNET_RPC --broadcast --private-key $MAINNET_DEPLOYER_PK --verify --etherscan-api-key $ETHERSCAN_API_KEY'",
+    "deploy:goerli": "bash -c 'source .env && forge script DeployGoerli --rpc-url $GOERLI_RPC --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY'",
+    "deploy:mainnet": "bash -c 'source .env && forge script DeployMainnet --rpc-url $MAINNET_RPC --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY'",
+    "deploy:local": "bash -c 'source .env && forge script DeployMainnet --rpc-url $MAINNET_RPC --broadcast'",
     "lint:fix": "forge fmt",
-    "postinstall": "forge install",
     "lint:check": "forge fmt --check"
   },
   "devDependencies": {
